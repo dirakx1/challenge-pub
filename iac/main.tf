@@ -12,7 +12,6 @@ resource "aws_db_instance" "example" {
   engine               = "postgres"
   engine_version       = "12.5"
   instance_class       = "db.t2.micro"
-  name                 = "mydb"
   username             = "db_user"
   password             = "db_password"
   parameter_group_name = "default.postgres12"
@@ -21,7 +20,7 @@ resource "aws_db_instance" "example" {
   skip_final_snapshot = true
 
   tags = {
-    Name = "MyDatabase"
+    Name = "PUBSUBDB"
   }
 }
 
